@@ -1,0 +1,23 @@
+/* footer */
+footer {
+  background-color: #082b48;
+  color: white;
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  float: right;
+}
+
+.footer-link {
+  color: white;
+}
+/* footer */
+@media only screen and (max-width: 767px) {
+  .copyright {
+    font-size: 10px;
+    float: none;
+    text-align: center;
+  }
+}
