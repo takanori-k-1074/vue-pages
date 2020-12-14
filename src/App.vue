@@ -1,25 +1,20 @@
 <template>
   <div id="app">
-    <header>
-      <div class="container clear">
-        <div class="header-left">
-          <h1 class="header-title">Takanori K's Portoforio</h1>
-        </div>
-        <div class="header-right">
-          <ul class="header-nav clear">
-            <li class="header-nav-item">
-              <router-link to="/">Home</router-link>
-            </li>
-            <li class="header-nav-item">
-              <router-link to="/about">About</router-link>
-            </li>
-            <li class="header-nav-item"><a href="#">favorite</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    <Header></Header>
     <router-view />
+    <Footer></Footer>
   </div>
 </template>
+
+<script>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 
 <style></style>
