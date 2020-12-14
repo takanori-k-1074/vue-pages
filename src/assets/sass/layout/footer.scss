@@ -3,6 +3,7 @@ footer {
   background-color: #082b48;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 
 .copyright {
@@ -12,12 +13,14 @@ footer {
 
 .footer-link {
   color: white;
+  &hover {
+    opacity: 0.7;
+  }
 }
 /* footer */
 @media only screen and (max-width: 767px) {
   .copyright {
     font-size: 10px;
     float: none;
-    text-align: center;
   }
 }
