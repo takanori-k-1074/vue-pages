@@ -20,6 +20,89 @@
       </div>
     </section>
 
+    <section class="timeline section">
+      <div class="container clear">
+        <h2 class="section-title">ヒストリー</h2>
+        <ul class="timeline">
+          <li>
+            <p class="timeline-date">2019年10月</p>
+            <div class="timeline-content">
+              <p>
+                自衛官在職中同僚からの影響でプログラミングに興味をもちエンジニアを目指すことに決める
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年3月</p>
+            <div class="timeline-content">
+              <p>
+                <span class="Niwaai-content">自衛官退職</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年4月</p>
+            <div class="timeline-content">
+              <p>
+                プログラミングの勉強（Progate、Railsチュートリアル）、
+                ポートフォリオ作成のための知見を情報収集
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年6月</p>
+            <div class="timeline-content">
+              <p>
+                プログラミングスクールに入学（2ヶ月半）
+              </p>
+              <p>
+                HTML・CSS・Rubyの基礎文法、CLI操作、Linuxコマンド、Git・Githubの使い方、
+                DB設計、Railsを使った簡単なチャットアプリケーションの作成<br />
+                チーム開発でフリマアプリの制作
+              </p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年7月</p>
+            <div class="timeline-content">
+              <p>
+                自由作成課題でlinebotを作成
+              </p>
+              <p></p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年8月</p>
+            <div class="timeline-content">
+              <p>プログラミングスクールを卒業</p>
+              <p>ポートフォリオの制作に取り掛かる</p>
+              <p>Docker・AWS・CircleCI・vuejsについて学習する</p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年9月</p>
+            <div class="timeline-content">
+              <p>ポートフォリオが完成</p>
+              <p>steamnews翻訳アプリ、ポートフォリオページ</p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年10月</p>
+            <div class="timeline-content">
+              <p>就職活動開始</p>
+              <p>就職活動の中で不足している知見を情報収集</p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2020年12月（現在）</p>
+            <div class="timeline-content">
+              <p>就職活動継続しながら追加ポートフォリオ作成中</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="course section">
       <div class="container">
         <h2 class="section-title">ポートフォリオ一覧</h2>
