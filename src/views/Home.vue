@@ -11,8 +11,7 @@
             小泉高規(コイズミタカノリ)<br />
             自衛官退職後webエンジニアになるため本格的に学習開始<br />
             ポートフォリオを作成しつつ就職活動しながら継続して不足していると考えられる技術について学習中<br /><br />
-            このページはvue/cli
-            4.1.1で作成,レスポンシブ対応とmetaタグでSEOを意識している<br />
+            このページはvue/cli 4.1.1で作成,レスポンシブ対応とmetaタグでSEOを意識している<br />
             フロントエンドとバックエンドは別プロジェクトが多いらしいという情報からvueのみでやってみることにした<br /><br />
             favoriteページではsteamAPIで最近興味のあるゲームのニュースを叩いてます
           </p>
@@ -57,8 +56,7 @@
               </p>
               <p>
                 HTML・CSS・Rubyの基礎文法、CLI操作、Linuxコマンド、Git・Githubの使い方、
-                DB設計、Railsを使った簡単なチャットアプリケーションの作成<br />
-                チーム開発でフリマアプリの制作
+                DB設計、Railsを使った簡単なチャットアプリケーションの作成
               </p>
             </div>
           </li>
@@ -66,7 +64,8 @@
             <p class="timeline-date">2020年7月</p>
             <div class="timeline-content">
               <p>
-                自由作成課題でlinebotを作成
+                自由作成課題でlinebotを作成<br />
+                チーム開発でフリマアプリの制作
               </p>
               <p></p>
             </div>
@@ -115,9 +114,7 @@
             <p>Rails / Vue</p>
           </div>
           <div class="course-item">
-            <a href="https://mysteamnews1074.com/"
-              ><img src="../assets/steamnews.png" />
-            </a>
+            <a href="https://mysteamnews1074.com/"><img src="../assets/steamnews.png" /> </a>
             <p>Rails / AWS / Docker / steamAPI / Azuretranslator</p>
           </div>
           <div class="course-item">
@@ -126,9 +123,7 @@
           </div>
         </div>
         <h3 class="section-title">
-          <a href="https://github.com/takanori-k-1074" class="link"
-            >githubのリンク</a
-          >
+          <a href="https://github.com/takanori-k-1074" class="link">githubのリンク</a>
         </h3>
       </div>
     </section>
