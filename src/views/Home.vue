@@ -35,7 +35,7 @@
             <p class="timeline-date">2020年3月</p>
             <div class="timeline-content">
               <p>
-                <span class="Niwaai-content">自衛官退職</span>
+                自衛官退職
               </p>
             </div>
           </li>
