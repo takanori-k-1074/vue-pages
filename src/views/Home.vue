@@ -93,7 +93,7 @@
             </div>
           </li>
           <li>
-            <p class="timeline-date">2020年12月（現在）</p>
+            <p class="timeline-date">2020年12月<br>（現在）</p>
             <div class="timeline-content">
               <p>就職活動継続しながら追加ポートフォリオ作成中</p>
             </div>
