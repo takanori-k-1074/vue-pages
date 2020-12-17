@@ -8,7 +8,7 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=262060&count=1&format=json": {
+      "partner.steam-api.com": {
         target: "http://localhost:8080",
       }
     }
