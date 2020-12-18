@@ -1,6 +1,7 @@
 <template>
   <div class="weather-container">
     <div class="weather-wrap">
+      <p>tokyo等都市の名称を入れてenter</p>
       <div class="search-box">
       <input type="text" placeholder="Search..." class="search-bar" 
           v-model="query" v-on:keypress="fetchWeather" />
@@ -13,9 +14,9 @@
         <div class="weather-box">
           <div class="temp">{{ Math.round(weather.main.temp) }}°c</div>
           <div class="weather">{{ weather.weather[0].main }}</div>
-          <!-- <div class="icon">
+          <div class="icon">
                 <img:src="`${weather_icon}${weather.weather[0].icon}${'@2x.png'}`"/>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
