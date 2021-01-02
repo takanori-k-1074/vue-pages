@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,n){"use strict";n.r(e);var a=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"weather-container"},[t._v(" "+t._s(t.query)+" ")])},r=[],u=n("bc3a"),c=n.n(u),o={data:function(){return{query:null,weather:{}}},mounted:function(){var t=this;c.a.get("http://localhost:3000/api/v1/weather").then((function(e){return t.query=e}))}},i=o,l=n("2877"),s=Object(l["a"])(i,a,r,!1,null,null,null);e["default"]=s.exports}}]);
+//# sourceMappingURL=about.1187d011.js.map
