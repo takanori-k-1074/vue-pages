@@ -1,6 +1,7 @@
 module.exports = {
   devServer: {
-    proxy: 'http://rails-ecs-alb-920434585.ap-northeast-1.elb.amazonaws.com/'
+    proxy: "http://localhost:3000",
+
   },
   css: {
     loaderOptions: {
@@ -10,3 +11,4 @@ module.exports = {
     },
   }
 };
+

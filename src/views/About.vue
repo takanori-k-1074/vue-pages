@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     axios
-      .get(process.env.VUE_APP_API_URL + '/api/v1/weather')
+      .get(process.env.VUE_APP_API_URL)
       .then(response => (this.query = response));
   },
   methods: {
