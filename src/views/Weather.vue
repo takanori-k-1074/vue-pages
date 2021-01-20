@@ -1,14 +1,21 @@
 <template>
   <div class="weather-container">
-    <div class="date">
-      {{ todaysDate() }}
-    </div>
-    <div class="weather">
-      <p>{{ query.data.data.weather[0].main }}</p>
-      <p>{{ query.data.data.main.temp }}℃</p>
-      <p>風速{{ query.data.data.wind.speed }}m</p>
-      <p>{{ query.data.data.name }}</p>
-    </div>
+    <p>東京の天気</p>
+    <v-card
+    elevation="10"
+    outlined
+    shaped
+    >    
+      <div class="date">
+        {{ todaysDate() }}
+      </div>
+      <div class="weather">
+        <p>{{ query.data.data.weather[0].main }}</p>
+        <p>{{ query.data.data.main.temp }}℃</p>
+        <p>風速{{ query.data.data.wind.speed }}m</p>
+        <p>{{ query.data.data.name }}</p>
+      </div>
+    </v-card>
   </div>
 </template>
 <script>
