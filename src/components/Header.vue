@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: 'Header',
   props: {
     msg: String,
   },

@@ -14,8 +14,11 @@
             このページはvue/cli 4.1.1で作成,レスポンシブ対応とmetaタグでSEOを意識している<br />
             フロントエンドとバックエンドは別プロジェクトが多いらしいという情報からやってみることにした<br /><br />
             フロントからのAPI連携も必須要項に多かったのでフロントエンドはこれ、バックエンドはrailsでapi作ることにしました<br /><br />
-            <a href="https://github.com/takanori-k-1074/vue-pages"><b>このページ(vue)のgithub</b></a><br />
-            <a href="https://github.com/takanori-k-1074/rails_api_portforio"><b>railsapiのgithub</b></a>
+            <a href="https://github.com/takanori-k-1074/vue-pages"><b>このページ(vue)のgithub</b></a
+            ><br />
+            <a href="https://github.com/takanori-k-1074/rails_api_portforio"
+              ><b>railsapiのgithub</b></a
+            >
           </p>
         </div>
       </div>
@@ -95,7 +98,7 @@
             </div>
           </li>
           <li>
-            <p class="timeline-date">2020年12月<br>（現在）</p>
+            <p class="timeline-date">2020年12月<br />（現在）</p>
             <div class="timeline-content">
               <p>就職活動継続しながら追加ポートフォリオ作成中</p>
             </div>
