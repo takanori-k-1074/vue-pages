@@ -4,6 +4,7 @@
       {{ todaysDate() }}
     </div>
     <div class="weather">
+      
       <p>{{ query.data.data.weather[0].main }}</p>
       <p>{{ query.data.data.main.temp }}℃</p>
       <p>風速{{ query.data.data.wind.speed }}m</p>

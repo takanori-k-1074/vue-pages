@@ -10,9 +10,9 @@
             <router-link to="/">Home</router-link>
           </li>
           <li class="header-nav-item">
-            <router-link to="/about">About</router-link>
+            <router-link to="/weather">Weather</router-link>
           </li>
-          <li class="header-nav-item"><a href="#">favorite</a></li>
+          <!-- <li class="header-nav-item"><a href="#">favorite</a></li> -->
         </ul>
       </div>
     </div>
