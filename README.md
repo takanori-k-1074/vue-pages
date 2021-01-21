@@ -2,7 +2,7 @@
 vueで作成しているポートフォリオページです<br>
 企業面接で伺った話でフロントエンドとバックエンドを別プロジェクトで管理しているという話を聞きやってみている途中です。<br>
 フロントエンドからのapi連携も募集要項で見かけることが多かったので実装途中です。<br>
-フロントエンドVueCLIでバックエンドapiはrailsで作成
+フロントエンドVueCLI-herokuでバックエンドapiはrails-ecsで作成
 ## page
 https://pacific-depths-96242.herokuapp.com/
 
