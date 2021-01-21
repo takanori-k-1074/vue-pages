@@ -4,7 +4,7 @@ vueで作成しているポートフォリオページです<br>
 フロントエンドからのapi連携も募集要項で見かけることが多かったので実装途中です。<br>
 フロントエンドVueCLIでバックエンドapiはrailsで作成
 ## page
-http://rails-ecs-alb-920434585.ap-northeast-1.elb.amazonaws.com/api/v1/weather
+https://pacific-depths-96242.herokuapp.com/
 
 
 ## 使用技術
