@@ -12,7 +12,9 @@
           <li class="header-nav-item">
             <router-link to="/weather">Weather</router-link>
           </li>
-          <!-- <li class="header-nav-item"><a href="#">favorite</a></li> -->
+          <li class="header-nav-item">
+            <router-link to="/crud">Crud</router-link>
+          </li>
         </ul>
       </div>
     </div>
