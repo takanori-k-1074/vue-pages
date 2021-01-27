@@ -32,3 +32,38 @@
     </div>
   </div>
 </template>
+
+<script>
+  import axios from 'axios'
+
+  export default {
+    name: 'MusicHome',
+    data: function() {
+      return {
+        musicInfo: {},
+        musicInfoBool: false,
+        musics: [],
+      }
+    },
+    mounted: function() {
+      this.fetchMusics();
+    },
+    methods: {
+      fetchMusics() {
+        axios.get('/api/v1/music').then((res) => {
+          for(var i = 0; i < res.data.musics.length; i++) {
+            this.musics.push(res.data.musics[i]);
+          }
+        }, (error) => {
+          console.log(error);
+        });
+      },
+      setMusicInfo(id){
+        axios.get(`api/v1/musics/${id}.json`).then(res => {
+          this.musicInfo = res.data;
+          this.musicInfoBool = true;
+        });
+      }
+    }
+  }
+</script>
