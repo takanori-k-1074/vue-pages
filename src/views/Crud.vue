@@ -2,29 +2,26 @@
   <div class="container">
     <h1 class="title">music~</h1>
     <div class="">
-      <div class="col s4 m6">
+      <div class="col s4 m6" v-for="music in musics" :key="music.id">
         <div class="card btn">
-          <span class="card-title">
-            music-title
+          <span class="card-title" v-on:click="setMusicInfo(music.id)">
+            {{ music.title }}
           </span>
         </div>
       </div>
     </div>
-    <div class="row" >
+    <div class="row" v-show="musicInfoBool">
       <div class="col s12 m12">
         <div class="card">
           <div class="card-content">
             <span class="card-title">
-             a
+             【{{ musicInfo.title }}】
             </span>
             <div class="detail">
-             b
+             ・著者:{{ musicInfo.artist }}
             </div>
             <div class="detail">
-             c
-            </div>
-            <div class="detail">
-              d
+             ・ジャンル：{{ musicInfo.genre }}
             </div>
           </div>
         </div>
@@ -59,7 +56,7 @@
         });
       },
       setMusicInfo(id){
-        axios.get(`api/v1/musics/${id}.json`).then(res => {
+        axios.get(`api/v1/music/${id}.json`).then(res => {
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
