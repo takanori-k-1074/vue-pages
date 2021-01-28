@@ -1,15 +1,17 @@
 <template>
   <div class="container">
-    <h1 class="title">music~</h1>
-    <div class="">
-      <div class="col s4 m6" v-for="music in musics" :key="music.id">
-        <div class="card btn">
-          <span class="card-title" v-on:click="setMusicInfo(music.id)">
-            {{ music.title }}
-          </span>
+    <h1 class="music-title">~music~</h1>
+    <v-container class="grey lighten-5 music-container">
+      <v-row no-gutters >
+        <div v-for="music in musics" :key="music.id" class="cont">
+          <v-card class="pa-2 musiccard" outlined tile>
+            <span class="card-title" v-on:click="setMusicInfo(music.id)">
+              {{ music.title }}
+            </span>
+          </v-card>
         </div>
-      </div>
-    </div>
+      </v-row>
+    </v-container>
     <div class="row" v-show="musicInfoBool">
       <div class="col s12 m12">
         <div class="card">
