@@ -1,6 +1,15 @@
+.music-title {
+  text-align: center;
+}
+
 .cont {
   width: 40%;
   margin: 3px auto;
+  .card-title {
+    &:hover {
+      color: orange;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -49,7 +49,7 @@
     },
     methods: {
       fetchMusics() {
-        axios.get('/api/v1/music').then((res) => {
+        axios.get(process.env.VUE_APP_API_URL_INDEX).then((res) => {
           for(var i = 0; i < res.data.musics.length; i++) {
             this.musics.push(res.data.musics[i]);
           }
@@ -58,7 +58,7 @@
         });
       },
       setMusicInfo(id){
-        axios.get(`api/v1/music/${id}.json`).then(res => {
+        axios.get(process.env.VUE_APP_API_URL_SHOW).then(res => {
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
