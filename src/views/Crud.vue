@@ -58,7 +58,7 @@
         });
       },
       setMusicInfo(id){
-        axios.get(`api/v1/music/${id}.json`).then(res => {
+        axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
