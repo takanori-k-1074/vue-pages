@@ -1,6 +1,7 @@
 <template>
+
   <div class="container">
-    <h1 class="music-title">~music~</h1>
+    <h1 class="music-title">~アルバムtitle一覧~</h1>
     <v-container class="grey lighten-5 music-container">
       <v-row no-gutters >
         <div v-for="music in musics" :key="music.id" class="cont">
@@ -58,7 +59,7 @@
         });
       },
       setMusicInfo(id){
-        axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
+        axios.get(`api/v1/music/${id}.json`).then(res => {
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
