@@ -26,6 +26,7 @@
             <div class="detail">
              ・ジャンル：{{ musicInfo.genre }}
             </div>
+            <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn">アルバムの編集</router-link>
           </div>
         </div>
       </div>
