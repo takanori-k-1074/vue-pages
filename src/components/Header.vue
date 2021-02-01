@@ -13,10 +13,7 @@
             <router-link to="/weather">Weather</router-link>
           </li>
           <li class="header-nav-item">
-            <router-link to="/crud">アルバム</router-link>
-          </li>
-           <li class="header-nav-item">
-            <router-link to="/create">アルバム登録</router-link>
+            <router-link to="/crud">Music</router-link>
           </li>
         </ul>
       </div>

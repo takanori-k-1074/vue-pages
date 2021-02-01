@@ -1,7 +1,10 @@
 <template>
 
   <div class="container">
-    <h1 class="music-title">~アルバムtitle一覧~</h1>
+    <div class="music-header">
+      <h1 class="music-title">~アルバムtitle一覧~</h1>
+      <router-link to="/create" class="btn-music">アルバム登録</router-link>
+    </div>
     <v-container class="grey lighten-5 music-container">
       <v-row no-gutters >
         <div v-for="music in musics" :key="music.id" class="cont">
@@ -26,7 +29,8 @@
             <div class="detail">
              ・ジャンル：{{ musicInfo.genre }}
             </div>
-            <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn">アルバムの編集</router-link>
+            <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn-music">アルバムの編集</router-link>
+            <buttun class="btn-music delete-btn" v-on:click="deleteMusic(musicInfo.id)">削除</buttun>
           </div>
         </div>
       </div>
@@ -64,7 +68,15 @@
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
-      }
+      },
+      deleteMusic(id) {
+        axios.delete(`api/v1/music/${id}`).then(() => {
+          this.musics = [];
+          this.musicInfo = '';
+          this.musicInfoBool = false;
+          this.fetchMusics();
+    })
+  },
     }
   }
 </script>

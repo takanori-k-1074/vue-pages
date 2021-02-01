@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="#f3e5f5 purple lighten-5 center">アルバムの編集</h1>
+    <h1 class="text-center">アルバムの編集</h1>
     <form class="col s12">
       <div class="row">
         <div class="input-field">
@@ -17,7 +17,7 @@
           <input placeholder="Genre" type="text" class="validate" v-model="music.genre" required="required">
         </div>
       </div>
-      <div class="btn" v-on:click="updateMusic(music.id)">アルバムの情報を変更</div>
+      <buttun class="btn-music" v-on:click="updateMusic(music.id)">アルバムの情報を更新</buttun>
     </form>
   </div>
 </template>

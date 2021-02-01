@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>アルバムの登録</h1>
+    <h1 class="text-center">アルバムの登録</h1>
     <form class="col">
       <div class="row">
         <div class="input-field">
@@ -17,7 +17,9 @@
           <input placeholder="Genre" type="text" class="validate" v-model="music.genre" required="required">
         </div>
       </div>
-      <div class="btn btn-info waves-effect waves-light" v-on:click="createMusic">登録</div>
+      <div class="buttun-center">
+        <buttun class="btn-music" v-on:click="createMusic">登録</buttun>
+      </div>
     </form>
   </div>
 </template>
@@ -47,4 +49,5 @@
   }
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
