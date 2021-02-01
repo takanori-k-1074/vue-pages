@@ -16,9 +16,6 @@
             フロントからのAPI連携も必須要項に多かったのでフロントエンドはこれ、バックエンドはrailsでapi作ることにしました<br /><br />
             <a href="https://github.com/takanori-k-1074/vue-pages"><b>このページ(vue)のgithub</b></a
             ><br />
-            <a href="https://github.com/takanori-k-1074/rails_api_portforio"
-              ><b>railsapiのgithub</b></a
-            >
           </p>
         </div>
       </div>
@@ -98,9 +95,15 @@
             </div>
           </li>
           <li>
-            <p class="timeline-date">2020年12月<br />（現在）</p>
+            <p class="timeline-date">2020年12月<br /></p>
             <div class="timeline-content">
-              <p>就職活動継続しながら追加ポートフォリオ作成中</p>
+              <p>就職活動継続しながら追加ポートフォリオ作成開始、フロント、バックが別プロジェクトでのAPi連携(CRUD)がお題</p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2021年1月<br />（現在）</p>
+            <div class="timeline-content">
+              <p>railsapiをAWS,ECSでデプロイまで実施,vueはvuetify使用</p>
             </div>
           </li>
         </ul>

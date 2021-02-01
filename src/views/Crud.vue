@@ -1,6 +1,7 @@
 <template>
 
   <div class="container">
+    <p>api通信によるCRUD処理の実装ページです。<br>railsのdbから情報を取得しています。<br>アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます</p>
     <div class="music-header">
       <h1 class="music-title">~アルバムtitle一覧~</h1>
       <router-link to="/create" class="btn-music">アルバム登録</router-link>

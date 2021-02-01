@@ -1,5 +1,6 @@
 <template>
   <div class="weather-container">
+    <p>外部apiの実装ページです。バックエンドはrailsを使用</p>
     <p>東京の天気</p>
     <v-card
     elevation="10"
