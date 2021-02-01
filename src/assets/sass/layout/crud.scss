@@ -24,6 +24,18 @@
   }
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.page-item {
+  margin: 0 2px;
+}
+.page-link {
+  &:hover {
+    color: palegreen;
+  }
+}
 .delete-btn {
   background-color: sandybrown;
 }

@@ -8,7 +8,7 @@
     </div>
     <v-container class="grey lighten-5 music-container">
       <v-row no-gutters >
-        <div v-for="music in musics" :key="music.id" class="cont">
+        <div v-for="music in getMusics" :key="music.id" class="cont">
           <v-card class="pa-2 musiccard" outlined tile>
             <span class="card-title" v-on:click="setMusicInfo(music.id)">
               {{ music.title }}
@@ -17,6 +17,24 @@
         </div>
       </v-row>
     </v-container>
+    <div>
+      <vuejs-paginate
+        :page-count="getPaginateCount"
+        :prev-text="'<'"
+        :next-text="'>'"
+        :click-handler="paginateClickCallback"
+        :container-class="'pagination justify-content-center'"
+        :page-class="'page-item'"
+        :page-link-class="'page-link'"
+        :prev-class="'page-item'"
+        :prev-link-class="'page-link'"
+        :next-class="'page-item'"
+        :next-link-class="'page-link'"
+        :first-last-button="true"
+        :first-button-text="'<<'"
+        :last-button-text="'>>'"
+      ></vuejs-paginate>
+    </div>
     <div class="row" v-show="musicInfoBool">
       <div class="col s12 m12">
         <div class="card">
@@ -41,18 +59,34 @@
 
 <script>
   import axios from 'axios'
+  import VueJsPaginate from "vuejs-paginate";
 
   export default {
     name: 'MusicHome',
+    components: {
+      "vuejs-paginate": VueJsPaginate,
+    },
     data: function() {
       return {
         musicInfo: {},
         musicInfoBool: false,
         musics: [],
+        currentPage: 1,
+        perPage: 10,
       }
     },
     mounted: function() {
       this.fetchMusics();
+    },
+    computed: {
+      getMusics: function () {
+        let start = (this.currentPage - 1) * this.perPage;
+        let end = this.currentPage * this.perPage;
+        return this.musics.slice(start, end);
+      },
+      getPaginateCount: function () {
+        return Math.ceil(this.musics.length / this.perPage);
+      },
     },
     methods: {
       fetchMusics() {
@@ -65,19 +99,22 @@
         });
       },
       setMusicInfo(id){
-        axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
+        axios.get(`api/v1/music/${id}.json`).then(res => {
           this.musicInfo = res.data;
           this.musicInfoBool = true;
         });
       },
       deleteMusic(id) {
-        axios.delete(`https://mysteamnews1074.com/api/v1/music/${id}`).then(() => {
+        axios.delete(`api/v1/music/${id}`).then(() => {
           this.musics = [];
           this.musicInfo = '';
           this.musicInfoBool = false;
           this.fetchMusics();
-    })
-  },
+        })
+      },
+      paginateClickCallback: function (pageNum) {
+        this.currentPage = Number(pageNum);
+      },
     }
   }
 </script>
