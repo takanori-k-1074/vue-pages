@@ -1,13 +1,14 @@
 <template>
-
   <div class="container">
-    <p>api通信によるCRUD処理の実装ページです。<br>railsのdbから情報を取得しています。<br>アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます</p>
+    <p>
+      api通信によるCRUD処理の実装ページです。<br />railsのdbから情報を取得しています。<br />アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます
+    </p>
     <div class="music-header">
       <h1 class="music-title">~アルバムtitle一覧~</h1>
       <router-link to="/create" class="btn-music">アルバム登録</router-link>
     </div>
     <v-container class="grey lighten-5 music-container">
-      <v-row no-gutters >
+      <v-row no-gutters>
         <div v-for="music in getMusics" :key="music.id" class="cont">
           <v-card class="pa-2 musiccard" outlined tile>
             <span class="card-title" v-on:click="setMusicInfo(music.id)">
@@ -39,17 +40,15 @@
       <div class="col s12 m12">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">
-             【{{ musicInfo.title }}】
-            </span>
-            <div class="detail">
-             ・著者:{{ musicInfo.artist }}
-            </div>
-            <div class="detail">
-             ・ジャンル：{{ musicInfo.genre }}
-            </div>
-            <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn-music">アルバムの編集</router-link>
-            <buttun class="btn-music delete-btn" v-on:click="deleteMusic(musicInfo.id)">削除</buttun>
+            <span class="card-title"> 【{{ musicInfo.title }}】 </span>
+            <div class="detail">・著者:{{ musicInfo.artist }}</div>
+            <div class="detail">・ジャンル：{{ musicInfo.genre }}</div>
+            <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn-music"
+              >アルバムの編集</router-link
+            >
+            <buttun class="btn-music delete-btn" v-on:click="deleteMusic(musicInfo.id)"
+              >削除</buttun
+            >
           </div>
         </div>
       </div>
@@ -58,63 +57,66 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  import VueJsPaginate from "vuejs-paginate";
+import axios from 'axios';
+import VueJsPaginate from 'vuejs-paginate';
 
-  export default {
-    name: 'MusicHome',
-    components: {
-      "vuejs-paginate": VueJsPaginate,
+export default {
+  name: 'MusicHome',
+  components: {
+    'vuejs-paginate': VueJsPaginate,
+  },
+  data: function() {
+    return {
+      musicInfo: {},
+      musicInfoBool: false,
+      musics: [],
+      currentPage: 1,
+      perPage: 10,
+    };
+  },
+  mounted: function() {
+    this.fetchMusics();
+  },
+  computed: {
+    getMusics: function() {
+      let start = (this.currentPage - 1) * this.perPage;
+      let end = this.currentPage * this.perPage;
+      return this.musics.slice(start, end);
     },
-    data: function() {
-      return {
-        musicInfo: {},
-        musicInfoBool: false,
-        musics: [],
-        currentPage: 1,
-        perPage: 10,
-      }
+    getPaginateCount: function() {
+      return Math.ceil(this.musics.length / this.perPage);
     },
-    mounted: function() {
-      this.fetchMusics();
-    },
-    computed: {
-      getMusics: function () {
-        let start = (this.currentPage - 1) * this.perPage;
-        let end = this.currentPage * this.perPage;
-        return this.musics.slice(start, end);
-      },
-      getPaginateCount: function () {
-        return Math.ceil(this.musics.length / this.perPage);
-      },
-    },
-    methods: {
-      fetchMusics() {
-        axios.get(process.env.VUE_APP_API_URL_INDEX).then((res) => {
-          for(var i = 0; i < res.data.musics.length; i++) {
+  },
+  methods: {
+    fetchMusics() {
+      axios.get(process.env.VUE_APP_API_URL_INDEX).then(
+        res => {
+          for (var i = 0; i < res.data.musics.length; i++) {
             this.musics.push(res.data.musics[i]);
           }
-        }, (error) => {
+        },
+        error => {
           console.log(error);
-        });
-      },
-      setMusicInfo(id){
-        axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
-          this.musicInfo = res.data;
-          this.musicInfoBool = true;
-        });
-      },
-      deleteMusic(id) {
-        axios.delete(`https://mysteamnews1074.com/api/v1/music/${id}`).then(() => {
-          this.musics = [];
-          this.musicInfo = '';
-          this.musicInfoBool = false;
-          this.fetchMusics();
-        })
-      },
-      paginateClickCallback: function (pageNum) {
-        this.currentPage = Number(pageNum);
-      },
-    }
-  }
+        }
+      );
+    },
+    setMusicInfo(id) {
+      axios.get(`/api/v1/music/${id}.json`).then(res => {
+        this.musicInfo = res.data;
+        this.musicInfoBool = true;
+      });
+    },
+    deleteMusic(id) {
+      axios.delete(`/api/v1/music/${id}`).then(() => {
+        this.musics = [];
+        this.musicInfo = '';
+        this.musicInfoBool = false;
+        this.fetchMusics();
+      });
+    },
+    paginateClickCallback: function(pageNum) {
+      this.currentPage = Number(pageNum);
+    },
+  },
+};
 </script>

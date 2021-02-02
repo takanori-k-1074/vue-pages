@@ -1,3 +1,4 @@
+/* /crud */
 .music-header {
   display: flex;
   justify-content: space-around;
@@ -24,6 +25,7 @@
   }
 }
 
+/* pagination */
 .pagination {
   display: flex;
   justify-content: center;
@@ -36,6 +38,9 @@
     color: palegreen;
   }
 }
+/* pagination */
+
+/* update & delete */
 .delete-btn {
   background-color: sandybrown;
 }
@@ -49,6 +54,7 @@
     }
   }
 }
+/* update & delete */
 
 @media only screen and (max-width: 768px) {
   .cont {

@@ -97,7 +97,9 @@
           <li>
             <p class="timeline-date">2020年12月<br /></p>
             <div class="timeline-content">
-              <p>就職活動継続しながら追加ポートフォリオ作成開始、フロント、バックが別プロジェクトでのAPi連携(CRUD)がお題</p>
+              <p>
+                就職活動継続しながら追加ポートフォリオ作成開始、フロント、バックが別プロジェクトでのAPi連携(CRUD)がお題
+              </p>
             </div>
           </li>
           <li>
