@@ -42,7 +42,7 @@
     },
     methods: {
       setmusicEdit(id){
-        axios.get(`http://localhost:3000/api/v1/music/${id}.json`).then(res => {
+        axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
           this.music.id = res.data.id;
           this.music.title = res.data.title;
           this.music.artist = res.data.artist;
@@ -51,7 +51,7 @@
       },
       updateMusic(id) {
         if (!this.music.title) return;
-        axios.put(`http://localhost:3000/api/v1/music/${id}`, { music: this.music }).then(() => {
+        axios.put(`https://mysteamnews1074.com/api/v1/music/${id}`, { music: this.music }).then(() => {
           this.$router.push({ path: '/crud' });
         }, (error) => {
           console.log(error);
