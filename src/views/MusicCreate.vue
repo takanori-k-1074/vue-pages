@@ -57,7 +57,7 @@ export default {
   methods: {
     createMusic: function() {
       if (!this.music.title) return;
-      axios.post('/api/v1/music', { music: this.music }).then(
+      axios.post('https://mysteamnews1074.com/api/v1/music', { music: this.music }).then(
         () => {
           this.$router.push({ path: '/crud' });
         },
