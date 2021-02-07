@@ -113,6 +113,7 @@
     </section>
 
     <section class="twitter section">
+      <h2 class="section-title">ツイッター</h2>
       <v-card class="mx-auto">
         <v-card-title>
           <v-icon large left color="#26c6da">mdi-twitter</v-icon>
