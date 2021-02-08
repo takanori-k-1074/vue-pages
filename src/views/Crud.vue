@@ -3,6 +3,7 @@
     <p>
       api通信によるCRUD処理の実装ページです。<br />railsのdbから情報を取得しています。<br />アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます
     </p>
+    <input class="filter-box" type="text" v-model="keyword" placeholder="検索">
     <div class="music-header">
       <h1 class="music-title">~アルバムtitle一覧~</h1>
       <router-link to="/create" class="btn-music">アルバム登録</router-link>
@@ -72,6 +73,7 @@ export default {
       musics: [],
       currentPage: 1,
       perPage: 10,
+      keyword: '',
     };
   },
   mounted: function() {
@@ -81,7 +83,18 @@ export default {
     getMusics: function() {
       let start = (this.currentPage - 1) * this.perPage;
       let end = this.currentPage * this.perPage;
-      return this.musics.slice(start, end);
+      // pagenation
+      // 検索
+      let musics = [];
+      for(let i in this.musics) {
+      let music = this.musics[i];
+      if( music.title.indexOf(this.keyword) !== -1) {
+          musics.push(music);
+          }
+      }
+      // 検索
+      // pagenation
+      return musics.slice(start, end);
     },
     getPaginateCount: function() {
       return Math.ceil(this.musics.length / this.perPage);
