@@ -114,13 +114,13 @@ export default {
       );
     },
     setMusicInfo(id) {
-      axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
+      axios.get(`/api/v1/music/${id}.json`).then(res => {
         this.musicInfo = res.data;
         this.musicInfoBool = true;
       });
     },
     deleteMusic(id) {
-      axios.delete(`https://mysteamnews1074.com/api/v1/music/${id}`).then(() => {
+      axios.delete(`/api/v1/music/${id}`).then(() => {
         this.musics = [];
         this.musicInfo = '';
         this.musicInfoBool = false;

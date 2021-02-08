@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     setmusicEdit(id) {
-      axios.get(`https://mysteamnews1074.com/api/v1/music/${id}.json`).then(res => {
+      axios.get(`/api/v1/music/${id}.json`).then(res => {
         this.music.id = res.data.id;
         this.music.title = res.data.title;
         this.music.artist = res.data.artist;
@@ -69,7 +69,7 @@ export default {
     },
     updateMusic(id) {
       if (!this.music.title) return;
-      axios.put(`https://mysteamnews1074.com/api/v1/music/${id}`, { music: this.music }).then(
+      axios.put(`/api/v1/music/${id}`, { music: this.music }).then(
         () => {
           this.$router.push({ path: '/crud' });
         },
