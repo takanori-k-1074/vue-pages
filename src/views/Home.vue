@@ -113,15 +113,17 @@
     </section>
 
     <section class="twitter section">
-      <h2 class="section-title">ツイッター</h2>
-      <v-card class="mx-auto">
-        <v-card-title>
-          <v-icon large left color="#26c6da">mdi-twitter</v-icon>
-        </v-card-title>
-        <v-flex sm12>
-          <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '2' }"/>
-        </v-flex>
-      </v-card>
+      <div class="container clear">
+        <h2 class="section-title">ツイッター</h2>
+        <v-card class="mx-auto">
+          <v-card-title>
+            <v-icon large left color="#26c6da">mdi-twitter</v-icon>
+          </v-card-title>
+          <v-flex sm12>
+            <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '2' }"/>
+          </v-flex>
+        </v-card>
+      </div>
     </section>
 
     <section class="course section">
