@@ -45,11 +45,9 @@
             <div class="detail">・著者:{{ musicInfo.artist }}</div>
             <div class="detail">・ジャンル：{{ musicInfo.genre }}</div>
             <router-link :to="{ path: `/edit/${musicInfo.id}` }" class="btn-music"
-              >アルバムの編集</router-link
-            >
+              >アルバムの編集</router-link>
             <buttun class="btn-music delete-btn" v-on:click="deleteMusic(musicInfo.id)"
-              >削除</buttun
-            >
+              >削除</buttun>
           </div>
         </div>
       </div>
