@@ -68,14 +68,14 @@ export default {
     return {
       musicInfo: {},
       musicInfoBool: false,
-      musics: [],
+      // musics: [],
       currentPage: 1,
       perPage: 10,
       keyword: '',
     };
   },
   mounted: function() {
-    this.fetchMusics();
+    this.$store.commit('fetchMusics')
   },
   computed: {
     getMusics: function() {
@@ -84,8 +84,8 @@ export default {
       // pagenation
       // 検索
       let musics = [];
-      for(let i in this.musics) {
-      let music = this.musics[i];
+      for(let i in this.$store.state.musics) {
+      let music = this.$store.state.musics[i];
       if( music.title.indexOf(this.keyword) !== -1) {
           musics.push(music);
           }
@@ -95,22 +95,22 @@ export default {
       return musics.slice(start, end);
     },
     getPaginateCount: function() {
-      return Math.ceil(this.musics.length / this.perPage);
+      return Math.ceil(this.$store.state.musics.length / this.perPage);
     },
   },
   methods: {
-    fetchMusics() {
-      axios.get(process.env.VUE_APP_API_URL_INDEX).then(
-        res => {
-          for (var i = 0; i < res.data.musics.length; i++) {
-            this.musics.push(res.data.musics[i]);
-          }
-        },
-        error => {
-          console.log(error);
-        }
-      );
-    },
+    // fetchMusics() {
+    //   axios.get(process.env.VUE_APP_API_URL_INDEX).then(
+    //     res => {
+    //       for (var i = 0; i < res.data.musics.length; i++) {
+    //         this.musics.push(res.data.musics[i]);
+    //       }
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     }
+    //   );
+    // },
     setMusicInfo(id) {
       axios.get(`/api/v1/music/${id}.json`).then(res => {
         this.musicInfo = res.data;

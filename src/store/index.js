@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     musics: []
   },
-  // mutations: {
+  mutations: {
   fetchMusics(state) {
     state.musics = [];
     axios.get(process.env.VUE_APP_API_URL_INDEX).then(
@@ -22,6 +22,7 @@ export default new Vuex.Store({
       }
     );
   },
+}
   // actions: {},
   // modules: {},
 });
