@@ -112,13 +112,13 @@ export default {
     //   );
     // },
     setMusicInfo(id) {
-      axios.get(`/api/v1/music/${id}.json`).then(res => {
+      axios.get(`https://rails-api-test11.com//api/v1/music/${id}.json`).then(res => {
         this.musicInfo = res.data;
         this.musicInfoBool = true;
       });
     },
     deleteMusic(id) {
-      axios.delete(`/api/v1/music/${id}`).then(() => {
+      axios.delete(`https://rails-api-test11.com//api/v1/music/${id}`).then(() => {
         this.musics = [];
         this.musicInfo = '';
         this.musicInfoBool = false;
