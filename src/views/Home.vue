@@ -98,14 +98,20 @@
             <p class="timeline-date">2020年12月<br /></p>
             <div class="timeline-content">
               <p>
-                就職活動継続しながら追加ポートフォリオ作成開始、フロント、バックが別プロジェクトでのAPi連携(CRUD)がお題
+                就職活動継続しながら追加ポートフォリオ作成開始、フロント、バックが別プロジェクトでのAPI連携(CRUD)がお題
               </p>
             </div>
           </li>
           <li>
-            <p class="timeline-date">2021年1月<br />（現在）</p>
+            <p class="timeline-date">2021年1月<br /></p>
             <div class="timeline-content">
-              <p>railsapiをAWS,ECSでデプロイまで実施,vueはvuetify使用</p>
+              <p>railsapiをAWS,ECSでデプロイまで実施,vueはvuetify使用,API連携のCRUD機能を実装</p>
+            </div>
+          </li>
+          <li>
+            <p class="timeline-date">2021年2月<br />（現在）</p>
+            <div class="timeline-content">
+              <p>railsapiECS利用による月額費用増加により維持を中止しEC2のみの構成に変更<br>vue検索フォーム、ページネーション等を実装<br>nuxtjs学習開始</p>
             </div>
           </li>
         </ul>
