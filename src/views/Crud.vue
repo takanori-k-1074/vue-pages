@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p>
-      api通信によるCRUD処理の実装ページです。<br />railsのdbから情報を取得しており検索フォームにtitle入力で検索ができます。<br />アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます
+      api通信によるCRUD処理の実装ページです。<br />railsのdbから情報を取得しており検索フォームにtitle入力で検索ができます。indexofによる配列検索の結果を出力しています<br />アルバムタイトルをクリックすると細部情報がページ下部に表示され更新と削除ができます
     </p>
     <input class="filter-box" type="text" v-model="keyword" placeholder="検索">
     <div class="music-header">
